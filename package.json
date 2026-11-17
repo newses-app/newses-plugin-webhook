@@ -1,0 +1,55 @@
+{
+  "name": "@newses/plugin-webhook",
+  "version": "0.1.0",
+  "description": "A Newses plugin that calls your webhook when your published feed changes, to rebuild a site that reads it",
+  "license": "AGPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newses-app/newses-plugin-webhook.git"
+  },
+  "keywords": [
+    "newses",
+    "newses-plugin",
+    "webhook"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "check": "npm run lint && npm run typecheck && prettier --check . && npm test",
+    "prepublishOnly": "npm run check",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "@newses/plugin-api": "^0.1.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@newses/plugin-api": "file:../newses/plugin-api/dist",
+    "@types/node": "^24.19.1",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.71.0",
+    "vitest": "^5.0.3",
+    "zod": "^4.6.7"
+  },
+  "homepage": "https://github.com/newses-app/newses-plugin-webhook#readme"
+}
