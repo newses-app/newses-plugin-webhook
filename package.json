@@ -1,6 +1,6 @@
 {
   "name": "@newses/plugin-webhook",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Newses plugin that calls your webhook when your published feed changes, to rebuild a site that reads it",
   "license": "AGPL-3.0-or-later",
   "repository": {

@@ -78,7 +78,7 @@ const failureOf = (response: Response) =>
 export default definePlugin({
   id: 'webhook',
   // Keep in step with package.json; a test checks they match.
-  version: '0.1.1',
+  version: '0.1.2',
   apiVersion: '^0.1',
   scopes: ['user'],
   hosts: ['api.github.com', 'api.netlify.com', 'api.cloudflare.com'],
